@@ -11,11 +11,11 @@ const projects = [
     link: "#"
   },
   {
-    title: "Portfolio Website",
-    description: "A responsive portfolio website showcasing projects and skills. Features smooth animations, dark/light mode toggle, and contact form integration.",
+    title: "Plusinv",
+    description: "A multi-tenant platform for business rental owners",
     image: "src/project3.jpg",
-    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
-    link: "#"
+    tags: ["React", "Next.js", "tRPC", "Github Actions", "Vercel", "Railway"],
+    link: "https://plusinv.online"
   },
   {
     title: "Weather Dashboard",
