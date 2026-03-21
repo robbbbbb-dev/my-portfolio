@@ -6,7 +6,7 @@ const projects = [
   {
     title: "School Information System",
     description: "A comprehensive student information system featuring an interactive 3D school tour powered by Three.js. Manage student records, grades, attendance, and enrollment with robust analytics dashboards and custom reporting tools.",
-    image: "src/project1.jpg",
+    image: "src/no_image_provided.jpg",
     tags: ["PHP", "MySQL", "Vanilla JS", "Three.js", "3D Tour"],
     link: "#"
   },
@@ -20,14 +20,14 @@ const projects = [
   {
     title: "School Information System",
     description: "A comprehensive student information system for managing student records, grades, attendance, and enrollment. Features interactive dashboards with Chart.js analytics, custom form builder for data collection, and robust reporting tools.",
-    image: "src/project4.jpg",
+    image: "src/no_image_provided.jpg",
     tags: ["Laravel", "MySQL", "Chart.js", "Form Builder"],
     link: "#"
   },
   {
     title: "HRIS",
     description: "A human resource information system for managing employee data, payroll, leave requests, and performance reviews. Includes interactive analytics dashboards with Chart.js, employee self-service portal, and automated workflows.",
-    image: "src/project4.jpg",
+    image: "src/no_image_provided.jpg",
     tags: ["Laravel", "MySQL", "Chart.js"],
     link: "#"
   },
