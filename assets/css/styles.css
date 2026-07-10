@@ -488,6 +488,22 @@ ul {
     font-weight: 600;
 }
 
+.project-highlights {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.project-highlights p {
+    margin-bottom: 5px;
+}
+
+.project-highlights strong {
+    color: var(--text-main);
+}
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
