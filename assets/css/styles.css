@@ -226,6 +226,13 @@ ul {
     width: 60px;
     height: 4px;
     background-color: var(--primary-color);
+    margin: 0 auto 20px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -354,6 +361,65 @@ ul {
     left: 0;
     color: var(--primary-color);
     font-weight: bold;
+}
+
+/* Automation Section */
+.automation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.automation-card {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.automation-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.automation-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.automation-card p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.card-features {
+    list-style: none;
+}
+
+.card-features li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card-features i {
+    color: #10b981;
+    margin-top: 4px;
+}
+
+.card-features strong {
+    color: var(--text-main);
 }
 
 /* Projects Grid */

@@ -27,6 +27,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#automation">Automation</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact" class="btn-primary">Contact</a></li>
@@ -44,10 +45,10 @@
                 <h2 class="subtitle">Application Support Team Lead</h2>
                 <h1>Paolo Robles</h1>
                 <p class="description">
-                    Specializing in GCP, Kubernetes, and CI/CD. I bridge the gap between application stability and high-velocity development, leading teams to deliver reliable, cloud-native solutions.
+                    Specializing in GCP, Kubernetes, and Support Automation. I build tools that bridge the gap between complex infrastructure and operational efficiency.
                 </p>
                 <div class="hero-btns">
-                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="#automation" class="btn-primary">View Automation</a>
                     <a href="#experience" class="btn-secondary">Experience</a>
                 </div>
                 <div class="social-links">
@@ -75,7 +76,7 @@
                         I am a results-driven IT professional with over 2 years of experience in L2 application support, cloud infrastructure monitoring, and web system development. Currently leading a team of 5 at <strong>Flexicon Solution Inc.</strong>, I manage incident response and system reliability for cloud-based SaaS platforms on Google Cloud Platform (GCP).
                     </p>
                     <p>
-                        My background combines full-stack development expertise with hands-on exposure to DevOps tooling. I am passionate about software engineering, continuous learning, and delivering robust, reliable systems. My ultimate goal is to transition into a <strong>DevOps or Site Reliability Engineering (SRE)</strong> role where I can leverage my experience in automation, observability, and incident management.
+                        My background combines full-stack development expertise with hands-on exposure to DevOps tooling. I am passionate about <strong>Support Automation</strong>—building custom bots and pipelines that reduce manual toil and accelerate incident resolution. My goal is to transition into a <strong>DevOps or Site Reliability Engineering (SRE)</strong> role.
                     </p>
                     <div class="stats-grid">
                         <div class="stat-item">
@@ -95,11 +96,11 @@
                 <div class="about-highlights">
                     <h3>Core Focus</h3>
                     <ul class="highlight-list">
-                        <li><i class="fas fa-check-circle"></i> Incident & Problem Management</li>
-                        <li><i class="fas fa-check-circle"></i> Cloud Monitoring & Observability</li>
-                        <li><i class="fas fa-check-circle"></i> Automation & Data Engineering</li>
-                        <li><i class="fas fa-check-circle"></i> Deployment & Release Support</li>
-                        <li><i class="fas fa-check-circle"></i> Team Leadership & Mentorship</li>
+                        <li><i class="fas fa-robot"></i> Support Automation & Tooling</li>
+                        <li><i class="fas fa-chart-line"></i> Proactive Monitoring & Alerting</li>
+                        <li><i class="fas fa-microchip"></i> Kubernetes & Cloud Operations</li>
+                        <li><i class="fas fa-shield-alt"></i> Incident & Problem Management</li>
+                        <li><i class="fas fa-users"></i> Team Leadership & Mentorship</li>
                     </ul>
                 </div>
             </div>
@@ -124,9 +125,9 @@
                         <p class="exp-summary">Leading incident coordination and system reliability for production SaaS systems.</p>
                         <ul class="exp-details">
                             <li>Manage a team of 5 engineers, handling 60–100 critical tickets and incidents per month.</li>
-                            <li>Achieved a consistent 1–5 minute client response time through optimized triage processes.</li>
+                            <li><strong>Developed custom automation</strong> via Telegram bots to streamline access to GCP, Kubernetes, and MongoDB.</li>
+                            <li>Implemented proactive alerting systems that significantly reduced time-to-detection for production issues.</li>
                             <li>Partner with development teams to accelerate root-cause investigations and prevent downtime.</li>
-                            <li>Design and maintain BigQuery pipelines for error detection and application health reporting.</li>
                             <li>Monitor real-time system health using Grafana, GCP Stackdriver, and Error Reporting.</li>
                         </ul>
                     </div>
@@ -143,7 +144,6 @@
                             <li>Resolved root causes of system issues for multiple School Information Systems (SIS).</li>
                             <li>Assisted in enhancing internal systems and collaborated on requirement gathering and testing.</li>
                             <li>Mentored and supervised interns, providing technical guidance and task delegation.</li>
-                            <li>Contributed to system documentation and internal process improvements.</li>
                         </ul>
                     </div>
                 </div>
@@ -151,8 +151,43 @@
         </div>
     </section>
 
+    <!-- Automation Section -->
+    <section id="automation" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Support Automation & Monitoring</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Custom-built tools to enhance operational efficiency and system reliability.</p>
+            </div>
+            <div class="automation-grid">
+                <div class="automation-card">
+                    <div class="card-icon"><i class="fab fa-telegram"></i></div>
+                    <h3>Infrastructure Telegram Bot</h3>
+                    <p>A centralized automation hub that allows the support team to interact with core infrastructure directly from Telegram.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> <strong>GCP & K8s Integration:</strong> Check pod status and restart services on the fly.</li>
+                        <li><i class="fas fa-check"></i> <strong>MongoDB Access:</strong> Query and validate data integrity without manual DB connections.</li>
+                        <li><i class="fas fa-check"></i> <strong>Backoffice Sync:</strong> Trigger administrative tasks and system checks remotely.</li>
+                        <li><i class="fas fa-check"></i> <strong>Efficiency:</strong> Reduced manual intervention time by over 40%.</li>
+                    </ul>
+                </div>
+                <div class="automation-card">
+                    <div class="card-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Proactive Alerting & Monitoring</h3>
+                    <p>Advanced monitoring setup designed to catch anomalies before they impact end-users.</p>
+                    <ul class="card-features">
+                        <li><i class="fas fa-check"></i> <strong>Real-time Alerts:</strong> Integrated GCP Stackdriver with Telegram for instant incident notification.</li>
+                        <li><i class="fas fa-check"></i> <strong>Grafana Dashboards:</strong> Custom visualizations for player counts, RTP thresholds, and service health.</li>
+                        <li><i class="fas fa-check"></i> <strong>Error Reporting:</strong> Automated log analysis to identify recurring patterns and root causes.</li>
+                        <li><i class="fas fa-check"></i> <strong>Impact:</strong> Achieved a consistent 1-5 minute response time for critical incidents.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section bg-light">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
@@ -165,7 +200,7 @@
                         <h3>Plusinv</h3>
                         <p class="project-category">Multi-Tenant SaaS Platform</p>
                         <p class="project-desc">
-                            A full-stack SaaS platform for equipment rental businesses in the Philippines, featuring a multi-tenant architecture with custom subdomains.
+                            A full-stack SaaS platform for equipment rental businesses, featuring a multi-tenant architecture with custom subdomains and automated CI/CD.
                         </p>
                         <div class="project-tech">
                             <span>Next.js 15</span>
@@ -197,28 +232,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- Enrollment System -->
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>School Enrollment System</h3>
-                        <p class="project-category">Deployed Educational Software</p>
-                        <p class="project-desc">
-                            A web-based system deployed for two schools, streamlining student registration and featuring an immersive 360° virtual tour.
-                        </p>
-                        <div class="project-tech">
-                            <span>Vanilla PHP</span>
-                            <span>MySQL</span>
-                            <span>Pannellum</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section bg-light">
+    <section id="skills" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Technical Stack</h2>
@@ -280,7 +299,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section bg-light">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
