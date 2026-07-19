@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paolo Robles | Application Support Team Lead & Aspiring DevOps Engineer</title>
     <meta name="description" content="Professional portfolio of Paolo Robles, an Application Support Team Lead specializing in GCP, Kubernetes, and CI/CD, with a focus on DevOps and SRE.">
+    <meta property="og:title" content="Paolo Robles | Application Support Team Lead">
+    <meta property="og:description" content="Specializing in GCP, Kubernetes, and Support Automation. Building tools that bridge complex infrastructure and operational efficiency.">
+    <meta property="og:type" content="website">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,8 +21,11 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!-- Skip to content for accessibility -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="container">
             <div class="logo">
                 <a href="#home">PR<span>.</span></a>
@@ -32,9 +38,11 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact" class="btn-primary">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </nav>
 
