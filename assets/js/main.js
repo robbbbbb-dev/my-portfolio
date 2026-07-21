@@ -3,6 +3,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const cursorGlow = document.querySelector('.cursor-glow');
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    // ---- Theme Toggle ----
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+    }
+
+    function updateThemeIcon(theme) {
+        if (!themeToggle) return;
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'light') {
+            icon.className = 'fas fa-moon';
+            themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        } else {
+            icon.className = 'fas fa-sun';
+            themeToggle.setAttribute('aria-label', 'Toggle light mode');
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon(next);
+        });
+    }
 
     // ---- Nav Overlay ----
     const overlay = document.createElement('div');

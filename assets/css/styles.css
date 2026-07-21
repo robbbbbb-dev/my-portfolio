@@ -738,11 +738,11 @@ p {
 .project-tag {
     font-family: var(--font-mono);
     font-size: 0.7rem;
-    color: var(--text-dim);
+    color: #a0a0b4;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    padding: 4px 10px;
-    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-sm);
 }
 
@@ -781,17 +781,17 @@ p {
 .project-stack span {
     font-family: var(--font-mono);
     font-size: 0.7rem;
-    padding: 4px 10px;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 100px;
-    color: var(--text-dim);
+    color: #c8c8d8;
     transition: var(--transition);
 }
 
 .project-card:hover .project-stack span {
-    border-color: var(--border-hover);
-    color: var(--text-secondary);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #e0e0e8;
 }
 
 /* ---- Stack / Skills ---- */
@@ -837,11 +837,11 @@ p {
 .stack-tags span {
     font-family: var(--font-mono);
     font-size: 0.72rem;
-    padding: 5px 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 100px;
-    color: var(--text-dim);
+    color: #c8c8d8;
     transition: var(--transition);
     display: inline-flex;
     align-items: center;
@@ -850,13 +850,48 @@ p {
 
 .stack-tags span i {
     font-size: 0.8rem;
-    color: var(--text-dim);
     transition: color 0.3s ease;
 }
 
-.stack-tags span:hover i {
-    color: var(--accent);
-}
+/* Colored icons by category */
+.stack-tags span .fa-react { color: #61dafb; }
+.stack-tags span .fa-n { color: #ffffff; }
+.stack-tags span .fa-vuejs { color: #42b883; }
+.stack-tags span .fa-js { color: #f7df1e; }
+.stack-tags span .fa-code { color: #3178c6; }
+.stack-tags span .fa-shield-halved { color: #3068b7; }
+.stack-tags span .fa-node-js { color: #68a063; }
+.stack-tags span .fa-fire { color: #ff6b35; }
+.stack-tags span .fa-arrows-left-right { color: #2596be; }
+.stack-tags span .fa-laravel { color: #ff2d20; }
+.stack-tags span .fa-php { color: #777bb4; }
+.stack-tags span .fa-plug { color: #8b8b9e; }
+.stack-tags span .fa-python { color: #3776ab; }
+.stack-tags span .fa-google { color: #4285f4; }
+.stack-tags span .fa-dharmachakra { color: #326ce5; }
+.stack-tags span .fa-docker { color: #2496ed; }
+.stack-tags span .fa-cubes { color: #844fba; }
+.stack-tags span .fa-jenkins { color: #d33833; }
+.stack-tags span .fa-rotate { color: #ef7b4d; }
+.stack-tags span .fa-github { color: #c8c8d8; }
+.stack-tags span .fa-v { color: #c8c8d8; }
+.stack-tags span .fa-train-subway { color: #c8c8d8; }
+.stack-tags span .fa-database { color: #336791; }
+.stack-tags span .fa-leaf { color: #4db33d; }
+.stack-tags span .fa-bolt { color: #dc382d; }
+.stack-tags span .fa-magnifying-glass-chart { color: #669df6; }
+.stack-tags span .fa-droplet { color: #c5f74f; }
+.stack-tags span .fa-chart-line { color: #f46800; }
+.stack-tags span .fa-eye { color: #4285f4; }
+.stack-tags span .fa-bug { color: #ea4335; }
+.stack-tags span .fa-scroll { color: #669df6; }
+.stack-tags span .fa-terminal { color: var(--accent); }
+.stack-tags span .fa-jira { color: #0052cc; }
+.stack-tags span .fa-confluence { color: #0052cc; }
+.stack-tags span .fa-bitbucket { color: #0052cc; }
+.stack-tags span .fa-paper-plane { color: #ff6c37; }
+.stack-tags span .fa-linux { color: #fcc624; }
+.stack-tags span .fa-git-alt { color: #f05032; }
 
 .stack-tags span:hover {
     color: var(--accent);
@@ -1223,5 +1258,167 @@ footer p {
 
     .cursor-glow {
         display: none;
+    }
+}
+
+/* ---- Theme Toggle ---- */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+}
+
+/* ---- LIGHT MODE ---- */
+[data-theme="light"] {
+    --bg: #f8f8fa;
+    --bg-elevated: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f0f0f4;
+    --surface: rgba(0, 0, 0, 0.03);
+    --border: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(0, 0, 0, 0.16);
+    --accent: #059669;
+    --accent-dim: rgba(5, 150, 105, 0.1);
+    --accent-glow: rgba(5, 150, 105, 0.15);
+    --text: #1a1a2e;
+    --text-secondary: #4a4a5e;
+    --text-dim: #6b6b80;
+    --white: #ffffff;
+}
+
+[data-theme="light"] body {
+    background: var(--bg);
+}
+
+[data-theme="light"] .noise-overlay {
+    opacity: 0.015;
+}
+
+[data-theme="light"] .cursor-glow {
+    display: none;
+}
+
+[data-theme="light"] #navbar {
+    background: rgba(248, 248, 250, 0.9);
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .logo {
+    color: var(--text);
+}
+
+[data-theme="light"] .hamburger-line {
+    background: var(--text);
+}
+
+[data-theme="light"] .hero-name {
+    color: var(--text);
+}
+
+[data-theme="light"] .grid-cell {
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .grid-cell.active {
+    background: var(--accent-dim);
+    border-color: rgba(5, 150, 105, 0.3);
+    box-shadow: 0 0 16px var(--accent-dim);
+}
+
+[data-theme="light"] .btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+[data-theme="light"] .exp-item,
+[data-theme="light"] .project-card,
+[data-theme="light"] .stack-group,
+[data-theme="light"] .cert-item,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .stat-card {
+    background: var(--bg-card);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .exp-item:hover,
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .stack-group:hover,
+[data-theme="light"] .stat-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .stack-tags span,
+[data-theme="light"] .project-stack span,
+[data-theme="light"] .project-tag {
+    background: #f0f0f4;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #4a4a5e;
+}
+
+[data-theme="light"] .stack-tags span:hover {
+    background: var(--accent-dim);
+    border-color: rgba(5, 150, 105, 0.3);
+    color: var(--accent);
+}
+
+[data-theme="light"] .exp-date {
+    background: #f0f0f4;
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #4a4a5e;
+}
+
+[data-theme="light"] .nav-links a {
+    color: #6b6b80;
+}
+
+[data-theme="light"] .nav-links a:hover,
+[data-theme="light"] .nav-links a.active {
+    color: var(--accent);
+}
+
+[data-theme="light"] footer {
+    border-top-color: rgba(0, 0, 0, 0.06);
+    background: #f0f0f4;
+}
+
+[data-theme="light"] .scroll-cue {
+    color: #6b6b80;
+}
+
+[data-theme="light"] .scroll-line {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .scroll-line::after {
+    background: var(--accent);
+}
+
+/* Light mode icon color overrides for better contrast */
+[data-theme="light"] .stack-tags span .fa-n { color: #000000; }
+[data-theme="light"] .stack-tags span .fa-github { color: #333333; }
+[data-theme="light"] .stack-tags span .fa-v { color: #333333; }
+[data-theme="light"] .stack-tags span .fa-train-subway { color: #333333; }
+
+@media (max-width: 768px) {
+    [data-theme="light"] .nav-links {
+        background: var(--bg-elevated);
+        border-left-color: rgba(0, 0, 0, 0.08);
     }
 }
