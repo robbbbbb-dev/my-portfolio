@@ -640,9 +640,8 @@ p {
 }
 
 .stat-card:hover {
-    border-color: rgba(0, 229, 160, 0.3);
+    border-color: var(--border-hover);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.3), 0 0 12px -4px var(--accent-dim);
 }
 
 .stat-card:hover::before {
@@ -696,9 +695,8 @@ p {
 }
 
 .exp-item:hover {
-    border-color: rgba(0, 229, 160, 0.3);
+    border-color: var(--border-hover);
     background: var(--bg-card-hover);
-    box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4), 0 0 16px -4px var(--accent-dim);
 }
 
 .exp-item:hover::after {
@@ -859,18 +857,18 @@ p {
 .project-stack span {
     font-family: var(--font-mono);
     font-size: 0.7rem;
-    padding: 5px 12px;
-    background: rgba(255, 255, 255, 0.06);
+    padding: 5px 14px;
+    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
-    color: #c8c8d8;
+    border-radius: var(--radius-sm);
+    color: #a0a0b4;
     transition: var(--transition);
 }
 
 [data-theme="dark"] .project-card:hover .project-stack span,
 :root:not([data-theme="light"]) .project-card:hover .project-stack span {
-    border-color: rgba(255, 255, 255, 0.15);
-    color: #e0e0e8;
+    border-color: rgba(255, 255, 255, 0.18);
+    color: #c8c8d8;
 }
 
 /* ---- Stack / Skills ---- */
@@ -1449,8 +1447,8 @@ footer p {
 [data-theme="light"] .stack-tags span,
 [data-theme="light"] .project-stack span,
 [data-theme="light"] .project-tag {
-    background: #eaeaef;
-    border-color: rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border-color: rgba(0, 0, 0, 0.12);
     color: #2a2a3e;
 }
 
@@ -1461,8 +1459,7 @@ footer p {
 }
 
 [data-theme="light"] .project-card:hover .project-stack span {
-    background: #dcdce4;
-    border-color: rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.18);
     color: #1a1a2e;
 }
 
