@@ -3,426 +3,433 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paolo Robles | Application Support Team Lead & Aspiring DevOps Engineer</title>
-    <meta name="description" content="Professional portfolio of Paolo Robles, an Application Support Team Lead specializing in GCP, Kubernetes, and CI/CD, with a focus on DevOps and SRE.">
-    <meta property="og:title" content="Paolo Robles | Application Support Team Lead">
-    <meta property="og:description" content="Specializing in GCP, Kubernetes, and Support Automation. Building tools that bridge complex infrastructure and operational efficiency.">
+    <title>Paolo Robles | Fullstack Developer & Cloud Engineer</title>
+    <meta name="description" content="Fullstack Developer with 2+ years building production systems on GCP, Kubernetes, and the MERN stack. Based in Quezon City, Philippines.">
+    <meta property="og:title" content="Paolo Robles | Fullstack Developer & Cloud Engineer">
+    <meta property="og:description" content="Building tools that bridge complex infrastructure and operational efficiency. React, Next.js, Node.js, GCP, Kubernetes.">
     <meta property="og:type" content="website">
-    
-    <!-- Google Fonts -->
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Skip to content for accessibility -->
-    <a href="#home" class="skip-link">Skip to main content</a>
+    <a href="#hero" class="skip-link">Skip to main content</a>
+
+    <!-- Noise overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <!-- Cursor spotlight -->
+    <div class="cursor-glow" aria-hidden="true"></div>
 
     <!-- Navigation -->
     <nav id="navbar" aria-label="Main navigation">
         <div class="container">
-            <div class="logo">
-                <a href="#home">PR<span>.</span></a>
-            </div>
+            <a href="#hero" class="logo">
+                <span class="logo-bracket">[</span>PR<span class="logo-bracket">]</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#automation">Automation</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact" class="btn-primary">Contact</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#skills">stack</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger-line"></span>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="subtitle">Application Support Team Lead</h2>
-                <h1>Paolo Robles</h1>
-                <p class="description">
-                    Specializing in GCP, Kubernetes, and Support Automation. I build tools that bridge the gap between complex infrastructure and operational efficiency.
-                </p>
-                <div class="hero-btns">
-                    <a href="#automation" class="btn-primary">View Automation</a>
-                    <a href="#experience" class="btn-secondary">Experience</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/paolo-robles" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/robbbbbb-dev" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:robles.pfr@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Summary</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I am a results-driven IT professional with over 2 years of experience in L2 application support, cloud infrastructure monitoring, and web system development. Currently leading a team of 5 at <strong>Flexicon Solution Inc.</strong>, I manage incident response and system reliability for cloud-based SaaS platforms on Google Cloud Platform (GCP).
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span class="terminal-prompt">~$</span> Fullstack Developer & Cloud Engineer
+                    </div>
+                    <h1 class="hero-name">
+                        <span class="line">Paolo</span>
+                        <span class="line">Robles<span class="cursor-blink">_</span></span>
+                    </h1>
+                    <p class="hero-desc">
+                        I build and operate production systems on GCP and Kubernetes. From React frontends to CI/CD pipelines, I ship tools that reduce manual toil and keep services reliable.
                     </p>
-                    <p>
-                        My background combines full-stack development expertise with hands-on exposure to DevOps tooling. I am passionate about <strong>Support Automation</strong>—building custom bots and pipelines that reduce manual toil and accelerate incident resolution. My goal is to transition into a <strong>DevOps or Site Reliability Engineering (SRE)</strong> role.
-                    </p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1-5m</span>
-                            <span class="stat-label">Response Time</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Team Size</span>
-                        </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">
+                            <span class="btn-text">View projects</span>
+                            <span class="btn-arrow">&rarr;</span>
+                        </a>
+                        <a href="#contact" class="btn-ghost">Get in touch</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Quezon City, PH</span>
+                        <span class="meta-item"><i class="fas fa-circle status-dot"></i> Open to opportunities</span>
                     </div>
                 </div>
-                <div class="about-highlights">
-                    <h3>Core Focus</h3>
-                    <ul class="highlight-list">
-                        <li><i class="fas fa-robot"></i> Support Automation & Tooling</li>
-                        <li><i class="fas fa-chart-line"></i> Proactive Monitoring & Alerting</li>
-                        <li><i class="fas fa-microchip"></i> Kubernetes & Cloud Operations</li>
-                        <li><i class="fas fa-shield-alt"></i> Incident & Problem Management</li>
-                        <li><i class="fas fa-users"></i> Team Leadership & Mentorship</li>
-                    </ul>
+                <div class="hero-grid-art" aria-hidden="true">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell active"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell active"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell active"></div>
+                    <div class="grid-cell"></div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-cue" aria-hidden="true">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="timeline">
-                <!-- Flexicon -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Mar 2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Team Lead, L2 Application Support</h3>
-                        <h4 class="company">Flexicon Solution Inc.</h4>
-                        <p class="exp-summary">Leading incident coordination and system reliability for production SaaS systems.</p>
-                        <ul class="exp-details">
-                            <li>Manage a team of 5 engineers, handling 60–100 critical tickets and incidents per month.</li>
-                            <li><strong>Developed custom automation</strong> via Telegram bots to streamline access to GCP, Kubernetes, and MongoDB.</li>
-                            <li>Implemented proactive alerting systems that significantly reduced time-to-detection for production issues.</li>
-                            <li>Partner with development teams to accelerate root-cause investigations and prevent downtime.</li>
-                            <li>Monitor real-time system health using Grafana, GCP Stackdriver, and Error Reporting.</li>
-                        </ul>
-                    </div>
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-index">01</span>
+                    <span class="label-text">About</span>
                 </div>
-                <!-- Nephila Web -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Feb 2024 - Mar 2025</div>
-                    <div class="timeline-content">
-                        <h3>Junior Web Developer</h3>
-                        <h4 class="company">Nephila Web</h4>
-                        <p class="exp-summary">Provided application support and development for SIS and HRIS platforms.</p>
-                        <ul class="exp-details">
-                            <li>Resolved root causes of system issues for multiple School Information Systems (SIS).</li>
-                            <li>Assisted in enhancing internal systems and collaborated on requirement gathering and testing.</li>
-                            <li>Mentored and supervised interns, providing technical guidance and task delegation.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Mentorship -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2018 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Technical Mentor & Capstone Consultant</h3>
-                        <h4 class="company">Freelance</h4>
-                        <p class="exp-summary">Guiding students through complex software engineering and architectural challenges.</p>
-                        <ul class="exp-details">
-                            <li>Provide architectural guidance and code reviews for diverse student capstone projects.</li>
-                            <li>Troubleshoot complex bugs and logic issues across multiple stacks (PHP, Node.js, Python).</li>
-                            <li>Mentor students on best practices for database design, API integration, and deployment.</li>
-                            <li>Help students translate theoretical knowledge into practical, production-ready applications.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Automation Section -->
-    <section id="automation" class="section bg-dark-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Support Automation & Monitoring</h2>
-                <div class="underline"></div>
-                <p class="section-subtitle">Custom-built tools to enhance operational efficiency and system reliability.</p>
-            </div>
-            <div class="automation-grid">
-                <div class="automation-card">
-                    <div class="card-icon"><i class="fab fa-telegram"></i></div>
-                    <h3>Infrastructure Telegram Bot</h3>
-                    <p>A centralized automation hub that allows the support team to interact with core infrastructure directly from Telegram.</p>
-                    <ul class="card-features">
-                        <li><i class="fas fa-check"></i> <strong>Jira API Integration:</strong> Real-time ticket tracking and automated update notifications.</li>
-                        <li><i class="fas fa-check"></i> <strong>GCP & K8s Integration:</strong> Check pod status and restart services on the fly.</li>
-                        <li><i class="fas fa-check"></i> <strong>MongoDB Access:</strong> Query and validate data integrity without manual DB connections.</li>
-                        <li><i class="fas fa-check"></i> <strong>Backoffice Sync:</strong> Trigger administrative tasks and system checks remotely.</li>
-                        <li><i class="fas fa-check"></i> <strong>Efficiency:</strong> Reduced manual intervention time by over 40%.</li>
-                    </ul>
-                </div>
-                <div class="automation-card">
-                    <div class="card-icon"><i class="fas fa-bell"></i></div>
-                    <h3>Proactive Alerting & Monitoring</h3>
-                    <p>Advanced monitoring setup designed to catch anomalies before they impact end-users.</p>
-                    <ul class="card-features">
-                        <li><i class="fas fa-check"></i> <strong>Real-time Alerts:</strong> Integrated GCP Stackdriver with Telegram for instant incident notification.</li>
-                        <li><i class="fas fa-check"></i> <strong>Grafana Dashboards:</strong> Custom visualizations for player counts, RTP thresholds, and service health.</li>
-                        <li><i class="fas fa-check"></i> <strong>Error Reporting:</strong> Automated log analysis to identify recurring patterns and root causes.</li>
-                        <li><i class="fas fa-check"></i> <strong>Impact:</strong> Achieved a consistent 1-5 minute response time for critical incidents.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="projects-grid">
-                <!-- Plusinv -->
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Plusinv</h3>
-                        <p class="project-category">Lead Developer | SaaS Platform</p>
-                        <p class="project-desc">
-                            A full-stack multi-tenant SaaS platform for equipment rental businesses, featuring custom subdomain routing and automated CI/CD pipelines.
+                <div class="about-layout">
+                    <div class="about-main">
+                        <h2>Fullstack developer who builds and operates production systems end-to-end</h2>
+                        <p>
+                            2+ years of combined web development and application support across the MERN-adjacent and PHP ecosystems. I lead a team of 5 at Flexicon Solution Inc., managing incident response and system reliability for cloud-based SaaS platforms on Google Cloud Platform.
                         </p>
-                        <div class="project-tech">
-                            <span>Next.js 15</span>
+                        <p>
+                            My background combines fullstack development with hands-on DevOps tooling. I have built and shipped internal tools independently, including a Telegram chatbot with database/log integrations and a Jira API integration for ticket automation. Strong debugging skills from leading a technical support team handling 60-100 critical tickets per month.
+                        </p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-value">2+</span>
+                            <span class="stat-key">years building</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">5</span>
+                            <span class="stat-key">engineers led</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">60-100</span>
+                            <span class="stat-key">tickets/month</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">&lt;5m</span>
+                            <span class="stat-key">response time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-index">02</span>
+                    <span class="label-text">Experience</span>
+                </div>
+                <div class="exp-list">
+                    <!-- Flexicon -->
+                    <article class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Team Lead, L2 Application Support</h3>
+                                <span class="exp-company">Flexicon Solution Inc.</span>
+                            </div>
+                            <time class="exp-date">Mar 2025 &mdash; Present</time>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Lead a team of 5 engineers supporting production SaaS on GCP, managing 60-100 tickets/incidents per month with 1-5 min response time</li>
+                            <li>Designed and built a full-stack Telegram chatbot &mdash; backend integrations with GCP databases, log sources, command handling, and Jira API for ticket automation</li>
+                            <li>Built internal tooling to automate version control and release workflows using Jenkins and ArgoCD</li>
+                            <li>Monitor Kubernetes clusters with k9s and build Grafana dashboards for real-time service health</li>
+                            <li>Partner with dev teams on root-cause investigations, deployment validation, and release readiness</li>
+                            <li>Promoted to Team Lead after 9 months for incident resolution performance and cross-functional coordination</li>
+                        </ul>
+                    </article>
+                    <!-- Nephila -->
+                    <article class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Junior Web Developer</h3>
+                                <span class="exp-company">Nephila Web</span>
+                            </div>
+                            <time class="exp-date">Feb 2024 &mdash; Mar 2025</time>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Developed and enhanced internal web systems including School Information Systems (SIS) and HRIS platforms</li>
+                            <li>Built features across the stack, collaborating with developers and stakeholders to gather requirements and ship deployments</li>
+                            <li>Investigated and resolved root causes of application issues to minimize downtime</li>
+                            <li>Mentored and supervised interns with technical guidance and task delegation</li>
+                        </ul>
+                    </article>
+                    <!-- Freelance -->
+                    <article class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Technical Mentor & Capstone Consultant</h3>
+                                <span class="exp-company">Freelance</span>
+                            </div>
+                            <time class="exp-date">2018 &mdash; Present</time>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Provide architectural guidance and code reviews for student capstone projects across PHP, Node.js, and Python</li>
+                            <li>Troubleshoot complex bugs and logic issues, helping translate theoretical knowledge into production-ready applications</li>
+                            <li>Mentor students on database design, API integration, and deployment best practices</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-index">03</span>
+                    <span class="label-text">Projects</span>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card featured">
+                        <div class="project-card-inner">
+                            <div class="project-top">
+                                <span class="project-tag">Full-stack</span>
+                                <span class="project-status live">In Development</span>
+                            </div>
+                            <h3>Multi-tenant rental marketplace</h3>
+                            <p>Full-stack platform for rental business owners to list items, with renter-facing search/filtering by proximity and sorting by rating and price.</p>
+                            <div class="project-stack">
+                                <span>Next.js 15</span>
+                                <span>TypeScript</span>
+                                <span>Hono</span>
+                                <span>tRPC</span>
+                                <span>PostgreSQL</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-top">
+                                <span class="project-tag">Automation</span>
+                            </div>
+                            <h3>Ops Telegram Bot</h3>
+                            <p>End-to-end chatbot with GCP database queries, log retrieval, and Jira API integration for automated ticket assignment and status updates. Reduced manual intervention by 40%.</p>
+                            <div class="project-stack">
+                                <span>Node.js</span>
+                                <span>GCP</span>
+                                <span>Jira API</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-top">
+                                <span class="project-tag">Full-stack</span>
+                            </div>
+                            <h3>ACFC Football Performance Tracker</h3>
+                            <p>Platform for coaches to monitor player progress, featuring an AI helper that gives students personalized guidance on training improvements.</p>
+                            <div class="project-stack">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-top">
+                                <span class="project-tag">DevOps</span>
+                            </div>
+                            <h3>Container Registry Mirroring</h3>
+                            <p>gcrane-based script to mirror container images between registries without requiring a Docker daemon, simplifying image promotion across environments.</p>
+                            <div class="project-stack">
+                                <span>Bash</span>
+                                <span>gcrane</span>
+                                <span>Docker</span>
+                                <span>GCP</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-top">
+                                <span class="project-tag">DevOps</span>
+                            </div>
+                            <h3>CI/CD Release Automation</h3>
+                            <p>Automated version control and release workflows using Jenkins and ArgoCD (GitOps), reducing manual deployment steps and improving release reliability.</p>
+                            <div class="project-stack">
+                                <span>Jenkins</span>
+                                <span>ArgoCD</span>
+                                <span>Kubernetes</span>
+                                <span>GCP</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills / Stack -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-index">04</span>
+                    <span class="label-text">Stack</span>
+                </div>
+                <div class="stack-grid">
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Frontend</h3>
+                        <div class="stack-tags">
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Vue</span>
                             <span>TypeScript</span>
+                            <span>JavaScript (ES6+)</span>
+                            <span>Zod</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Backend</h3>
+                        <div class="stack-tags">
+                            <span>Node.js</span>
                             <span>Hono</span>
                             <span>tRPC</span>
+                            <span>Laravel</span>
+                            <span>PHP</span>
+                            <span>REST APIs</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Cloud & DevOps</h3>
+                        <div class="stack-tags">
+                            <span>GCP</span>
+                            <span>Kubernetes</span>
+                            <span>Docker</span>
+                            <span>Terraform</span>
+                            <span>Jenkins</span>
+                            <span>ArgoCD</span>
+                            <span>GitHub Actions</span>
+                            <span>Vercel</span>
+                            <span>Railway</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Databases</h3>
+                        <div class="stack-tags">
                             <span>PostgreSQL</span>
+                            <span>MySQL</span>
+                            <span>MongoDB</span>
                             <span>Redis</span>
-                        </div>
-                        <div class="project-highlights">
-                            <p><strong>Role:</strong> Lead Developer</p>
-                            <p><strong>Focus:</strong> Architected multi-tenant routing, payment integration, and CI/CD deployment to Vercel and Railway.</p>
-                        </div>
-                        <div class="project-links">
-                            <span class="badge">In Development</span>
+                            <span>BigQuery</span>
+                            <span>Cloud SQL</span>
+                            <span>Drizzle ORM</span>
                         </div>
                     </div>
-                </div>
-                <!-- ACFC -->
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>ACFC Football Performance Tracker</h3>
-                        <p class="project-category">Lead Developer | College Capstone</p>
-                        <p class="project-desc">
-                            A data-driven performance tracking system for football students, providing personalized skill improvement advice based on training metrics.
-                        </p>
-                        <div class="project-tech">
-                            <span>Vanilla PHP</span>
-                            <span>Vanilla CSS</span>
-                            <span>Vanilla JS</span>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="project-highlights">
-                            <p><strong>Role:</strong> Lead Developer (Capstone)</p>
-                            <p><strong>Focus:</strong> Handled end-to-end architecture and custom design without external frameworks.</p>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Monitoring</h3>
+                        <div class="stack-tags">
+                            <span>Grafana</span>
+                            <span>Stackdriver</span>
+                            <span>Error Reporting</span>
+                            <span>Logs Explorer</span>
+                            <span>k9s</span>
                         </div>
                     </div>
-                </div>
-                <!-- SIS Kindergarten -->
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>School Information System (SIS)</h3>
-                        <p class="project-category">Lead Developer | Kindergarten Platform</p>
-                        <p class="project-desc">
-                            A specialized SIS designed for kindergarten management, streamlining student records, enrollment, and administrative workflows.
-                        </p>
-                        <div class="project-tech">
-                            <span>Vanilla PHP</span>
-                            <span>MySQL</span>
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="project-highlights">
-                            <p><strong>Role:</strong> Lead Developer</p>
-                            <p><strong>Focus:</strong> Designed core system architecture and database schema for educational management.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- E-Commerce -->
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>E-Commerce Website</h3>
-                        <p class="project-category">Lead Developer | Web Project</p>
-                        <p class="project-desc">
-                            A full-stack ecommerce solution featuring product catalogs, secure order placement, and an admin management dashboard.
-                        </p>
-                        <div class="project-tech">
-                            <span>Vanilla PHP</span>
-                            <span>MySQL</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-highlights">
-                            <p><strong>Role:</strong> Lead Developer</p>
-                            <p><strong>Focus:</strong> Built the entire system from scratch, focusing on CRUD operations and user flow.</p>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Tools</h3>
+                        <div class="stack-tags">
+                            <span>Jira</span>
+                            <span>Confluence</span>
+                            <span>Bitbucket</span>
+                            <span>Postman</span>
+                            <span>Linux</span>
+                            <span>Bash</span>
+                            <span>Git</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Stack</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span>GCP</span>
-                        <span>Kubernetes</span>
-                        <span>Docker</span>
-                        <span>Jenkins</span>
-                        <span>GitHub Actions</span>
-                        <span>Argo</span>
-                        <span>Grafana</span>
-                        <span>Vercel</span>
-                        <span>Railway</span>
-                    </div>
+        <!-- Certifications -->
+        <section id="certs" class="section">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-index">05</span>
+                    <span class="label-text">Certifications</span>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
-                    <div class="skill-tags">
-                        <span>BigQuery</span>
-                        <span>Cloud SQL</span>
-                        <span>PostgreSQL</span>
-                        <span>MySQL</span>
-                        <span>MongoDB</span>
-                        <span>Redis</span>
-                        <span>Drizzle ORM</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages & Web</h3>
-                    <div class="skill-tags">
-                        <span>TypeScript</span>
-                        <span>JavaScript (ES6+)</span>
-                        <span>PHP</span>
-                        <span>Next.js</span>
-                        <span>React</span>
-                        <span>Hono</span>
-                        <span>tRPC</span>
-                        <span>Laravel</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Certs</h3>
-                    <div class="skill-tags">
-                        <span>Jira</span>
-                        <span>Confluence</span>
-                        <span>Bitbucket</span>
-                        <span>Linux Admin</span>
-                        <span>CCNA</span>
-                        <span>CompTIA ITF+</span>
-                    </div>
+                <div class="certs-list">
+                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CompTIA ITF+</div>
+                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> LFC108 &mdash; Kubernetes & Cloud Native Associate Prep (Linux Foundation)</div>
+                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CCNA: Introduction to Networks</div>
+                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Claude Code 101 &mdash; Certificate of Completion</div>
+                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> OpenAI API &mdash; Certificate of Completion</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p>I am currently open to discussing <strong>DevOps, SRE, or Application Support</strong> opportunities. Whether you have a question or just want to say hi, my inbox is always open!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-index">06</span>
+                    <span class="label-text">Contact</span>
+                </div>
+                <div class="contact-layout">
+                    <div class="contact-main">
+                        <h2>Open to DevOps, SRE, or Fullstack opportunities</h2>
+                        <p>Whether you have a role, a project, or just want to connect &mdash; I am always happy to hear from you.</p>
+                    </div>
+                    <div class="contact-links">
+                        <a href="mailto:robles.pfr@gmail.com" class="contact-card">
                             <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:robles.pfr@gmail.com">robles.pfr@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
+                            <span>robles.pfr@gmail.com</span>
+                        </a>
+                        <a href="tel:+639393935996" class="contact-card">
                             <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <a href="tel:+639393935996">+63 939 393 5996</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Quezon City, Philippines</p>
-                            </div>
-                        </div>
+                            <span>+63 939 393 5996</span>
+                        </a>
+                        <a href="https://linkedin.com/in/paolo-robles" target="_blank" rel="noopener" class="contact-card">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/paolo-robles</span>
+                        </a>
+                        <a href="https://github.com/robbbbbb-dev" target="_blank" rel="noopener" class="contact-card">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/robbbbbb-dev</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Paolo Robles. Built with HTML, CSS, and JS.</p>
-                <div class="footer-social">
-                    <a href="https://linkedin.com/in/paolo-robles" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/robbbbbb-dev" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
+            <p>&copy; 2026 Paolo Robles. Built with vanilla HTML, CSS, and JS.</p>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/paolo-robles" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/robbbbbb-dev" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
