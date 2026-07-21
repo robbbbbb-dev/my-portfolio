@@ -1,19 +1,37 @@
-# Paolo Robles Portfolio
+# Paolo Robles — Portfolio
 
-A professional portfolio website showcasing my skills and experience as an Application Support Team Lead and aspiring DevOps/SRE Engineer.
+Personal portfolio site for Paolo Robles, a Fullstack Developer and Cloud Engineer based in Quezon City, Philippines.
+
+**Live:** [robbbbbb-dev.github.io/my-portfolio](https://robbbbbb-dev.github.io/my-portfolio)
 
 ## Tech Stack
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Deployment:** GitHub Pages via GitHub Actions
-- **Design:** Clean, professional, and mobile-responsive
+
+- HTML5, CSS3, vanilla JavaScript
+- Outfit + Geist Mono (Google Fonts)
+- Font Awesome icons
+- Deployed via GitHub Pages
 
 ## Features
-- **Hero Section:** Highlighting core identity and focus.
-- **About Section:** Detailed professional summary and key metrics.
-- **Experience Timeline:** Showcasing career progression and achievements.
-- **Projects Grid:** Featuring key technical projects and their stacks.
-- **Skills Matrix:** Categorized technical expertise.
-- **Contact Info:** Direct links for professional outreach.
+
+- Full dark-mode futuristic design with terminal/grid aesthetic
+- Cursor-following spotlight glow effect
+- Noise grain overlay for texture
+- Staggered scroll-reveal animations (IntersectionObserver)
+- Randomized hero grid cell animations
+- Glassmorphism navigation with active link highlighting
+- Fully responsive with mobile slide-out menu
+- Accessible: skip-link, aria labels, focus-visible, prefers-reduced-motion
+
+## Sections
+
+- **Hero** — Terminal-style intro with blinking cursor and animated grid art
+- **About** — Professional summary with key metrics
+- **Experience** — Career history at Flexicon Solution Inc., Nephila Web Technologies Inc., and freelance mentoring
+- **Projects** — Multi-tenant rental marketplace, Ops Telegram Bot, ACFC tracker, container registry mirroring, CI/CD automation
+- **Stack** — Categorized technical skills with icons (Frontend, Backend, Cloud/DevOps, Databases, Monitoring, Tools)
+- **Certifications** — CompTIA ITF+, LFC108, CCNA, and more
+- **Contact** — Email, phone, LinkedIn, GitHub
 
 ## Deployment
-This site is automatically deployed to GitHub Pages using the included GitHub Actions workflow. Any changes pushed to the `main` branch will trigger a new deployment.
+
+Pushed to `main` branch and deployed automatically via GitHub Pages.

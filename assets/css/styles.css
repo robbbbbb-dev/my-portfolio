@@ -843,6 +843,19 @@ p {
     border-radius: 100px;
     color: var(--text-dim);
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stack-tags span i {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    transition: color 0.3s ease;
+}
+
+.stack-tags span:hover i {
+    color: var(--accent);
 }
 
 .stack-tags span:hover {
