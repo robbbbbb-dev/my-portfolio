@@ -1436,12 +1436,16 @@ footer p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-[data-theme="light"] .exp-item:hover,
 [data-theme="light"] .project-card:hover,
-[data-theme="light"] .stack-group:hover,
-[data-theme="light"] .stat-card:hover {
+[data-theme="light"] .stack-group:hover {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     border-color: var(--accent);
+}
+
+[data-theme="light"] .exp-item:hover,
+[data-theme="light"] .stat-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.12);
 }
 
 [data-theme="light"] .stack-tags span,
