@@ -867,7 +867,8 @@ p {
     transition: var(--transition);
 }
 
-.project-card:hover .project-stack span {
+[data-theme="dark"] .project-card:hover .project-stack span,
+:root:not([data-theme="light"]) .project-card:hover .project-stack span {
     border-color: rgba(255, 255, 255, 0.15);
     color: #e0e0e8;
 }
@@ -1460,8 +1461,8 @@ footer p {
 }
 
 [data-theme="light"] .project-card:hover .project-stack span {
-    background: #e0e0e8;
-    border-color: rgba(0, 0, 0, 0.12);
+    background: #dcdce4;
+    border-color: rgba(0, 0, 0, 0.15);
     color: #1a1a2e;
 }
 
