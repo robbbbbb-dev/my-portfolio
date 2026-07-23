@@ -230,16 +230,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // ---- Experience Back-to-Top Button ----
-    const expBackBtn = document.querySelector('.exp-back-btn');
-    if (expBackBtn) {
-        expBackBtn.addEventListener('click', () => {
-            const expTop = document.getElementById('exp-top');
-            if (expTop) {
-                const offset = navbar.offsetHeight + 20;
-                const top = expTop.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
-            }
+    // ---- Experience Carousel ----
+    const expTrack = document.querySelector('.exp-track');
+    const expItems = document.querySelectorAll('.exp-item');
+    const expPrevBtn = document.querySelector('.exp-prev-btn');
+    const expNextBtn = document.querySelector('.exp-next-btn');
+    const expDotsContainer = document.querySelector('.exp-dots');
+    let expCurrentIndex = 0;
+
+    // Create dots
+    if (expDotsContainer) {
+        expItems.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('exp-dot');
+            dot.setAttribute('aria-label', `Go to role ${i + 1}`);
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => scrollToExp(i));
+            expDotsContainer.appendChild(dot);
         });
+    }
+
+    function scrollToExp(index) {
+        if (index < 0) index = expItems.length - 1;
+        if (index >= expItems.length) index = 0;
+        expCurrentIndex = index;
+        expItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        updateExpDots();
+    }
+
+    function updateExpDots() {
+        if (!expDotsContainer) return;
+        const dots = expDotsContainer.querySelectorAll('.exp-dot');
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === expCurrentIndex));
+    }
+
+    if (expPrevBtn) expPrevBtn.addEventListener('click', () => scrollToExp(expCurrentIndex - 1));
+    if (expNextBtn) expNextBtn.addEventListener('click', () => scrollToExp(expCurrentIndex + 1));
+
+    // Update dots on manual scroll
+    if (expTrack) {
+        let expScrollTimeout;
+        expTrack.addEventListener('scroll', () => {
+            clearTimeout(expScrollTimeout);
+            expScrollTimeout = setTimeout(() => {
+                const scrollLeft = expTrack.scrollLeft;
+                const cardWidth = expItems[0].offsetWidth + 24;
+                const newIndex = Math.round(scrollLeft / cardWidth);
+                if (newIndex !== expCurrentIndex && newIndex >= 0 && newIndex < expItems.length) {
+                    expCurrentIndex = newIndex;
+                    updateExpDots();
+                }
+            }, 50);
+        }, { passive: true });
     }
 });
