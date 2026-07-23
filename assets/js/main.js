@@ -177,6 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
+    // ---- Mobile-only Stack Accordion ----
+    const stackHeaders = document.querySelectorAll('[data-mobile-accordion] .stack-group-header');
+    stackHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            if (window.innerWidth > 480) return; // Only on mobile
+            const group = header.closest('.stack-group');
+            group.classList.toggle('open');
+        });
+    });
+
     // ---- Projects Carousel ----
     const track = document.querySelector('.projects-track');
     const prevBtn = document.querySelector('.carousel-prev');

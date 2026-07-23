@@ -1013,6 +1013,16 @@ p {
     color: var(--text);
 }
 
+.stack-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stack-mobile-chevron {
+    display: none;
+}
+
 .stack-icon {
     color: var(--accent);
     font-size: 0.7rem;
@@ -1496,6 +1506,35 @@ footer p {
 
     .stack-group {
         padding: 1.5rem;
+    }
+
+    /* Mobile-only accordion for stacks */
+    .stack-group-header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .stack-mobile-chevron {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--text-dim);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .stack-group[data-mobile-accordion] .stack-tags {
+        display: none;
+        margin-top: 1.25rem;
+    }
+
+    .stack-group[data-mobile-accordion].open .stack-tags {
+        display: flex;
+    }
+
+    .stack-group[data-mobile-accordion].open .stack-mobile-chevron {
+        transform: rotate(180deg);
+        color: var(--accent);
     }
 }
 
