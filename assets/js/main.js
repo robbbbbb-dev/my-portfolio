@@ -235,6 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const expItemsList = document.querySelectorAll('.exp-scroll-area .exp-item');
     const expProgressFill = document.querySelector('.exp-progress-fill');
     const expBackTop = document.querySelector('.exp-back-top');
+    const expScrollHint = document.querySelector('.exp-scroll-hint');
 
     if (expScrollArea && expItemsList.length > 0) {
         expScrollArea.addEventListener('scroll', () => {
@@ -246,6 +247,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const percentage = ((progress * (expItemsList.length - 1)) + 1) / expItemsList.length * 100;
             if (expProgressFill) {
                 expProgressFill.style.width = Math.min(percentage, 100) + '%';
+            }
+
+            // Hide scroll hint once user starts scrolling
+            if (expScrollHint && scrollTop > 20) {
+                expScrollHint.classList.add('hidden');
+            } else if (expScrollHint && scrollTop <= 20) {
+                expScrollHint.classList.remove('hidden');
             }
 
             // Show/hide back-to-top button when at last card

@@ -694,12 +694,57 @@ p {
     max-height: 400px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--border);
 }
 
 .exp-scroll-area::-webkit-scrollbar {
-    display: none;
+    width: 4px;
+}
+
+.exp-scroll-area::-webkit-scrollbar-track {
+    background: var(--border);
+    border-radius: 100px;
+}
+
+.exp-scroll-area::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 100px;
+}
+
+.exp-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    animation: hint-pulse 2s ease-in-out infinite;
+}
+
+.exp-scroll-hint i {
+    font-size: 0.65rem;
+    animation: hint-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes hint-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+@keyframes hint-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.exp-scroll-hint.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 .exp-item {
