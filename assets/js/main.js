@@ -230,20 +230,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // ---- Stack Accordion ----
-    const stackHeaders = document.querySelectorAll('.stack-header');
-    stackHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const expanded = header.getAttribute('aria-expanded') === 'true';
-            const tags = header.nextElementSibling;
+    // ---- Experience Carousel ----
+    const expCards = document.querySelectorAll('.exp-card');
+    const expPrev = document.querySelector('.exp-prev');
+    const expNext = document.querySelector('.exp-next');
+    const expIndicators = document.querySelector('.exp-indicators');
+    let expIndex = 0;
 
-            if (expanded) {
-                header.setAttribute('aria-expanded', 'false');
-                tags.setAttribute('hidden', '');
-            } else {
-                header.setAttribute('aria-expanded', 'true');
-                tags.removeAttribute('hidden');
+    // Create dots
+    if (expIndicators) {
+        expCards.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('exp-dot');
+            dot.setAttribute('aria-label', `Go to role ${i + 1}`);
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => setExpCard(i));
+            expIndicators.appendChild(dot);
+        });
+    }
+
+    function setExpCard(index) {
+        if (index < 0) index = expCards.length - 1;
+        if (index >= expCards.length) index = 0;
+        expIndex = index;
+
+        expCards.forEach((card, i) => {
+            card.classList.remove('active', 'prev', 'next');
+            if (i === index) {
+                card.classList.add('active');
+            } else if (i === (index - 1 + expCards.length) % expCards.length) {
+                card.classList.add('prev');
+            } else if (i === (index + 1) % expCards.length) {
+                card.classList.add('next');
             }
         });
-    });
+
+        const dots = expIndicators ? expIndicators.querySelectorAll('.exp-dot') : [];
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    }
+
+    if (expPrev) expPrev.addEventListener('click', () => setExpCard(expIndex - 1));
+    if (expNext) expNext.addEventListener('click', () => setExpCard(expIndex + 1));
+
+    // Initialize
+    setExpCard(0);
 });

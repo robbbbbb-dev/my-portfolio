@@ -143,56 +143,63 @@
                     <span class="label-index">02</span>
                     <span class="label-text">Experience</span>
                 </div>
-                <div class="exp-list">
-                    <!-- Flexicon -->
-                    <article class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-title-group">
-                                <h3>Team Lead, L2 Application Support</h3>
-                                <span class="exp-company">Flexicon Solution Inc.</span>
+                <div class="exp-carousel">
+                    <div class="exp-carousel-track">
+                        <!-- Flexicon -->
+                        <article class="exp-card active">
+                            <div class="exp-header">
+                                <div class="exp-title-group">
+                                    <h3>Team Lead, L2 Application Support</h3>
+                                    <span class="exp-company">Flexicon Solution Inc.</span>
+                                </div>
+                                <time class="exp-date">Mar 2025 &mdash; Present</time>
                             </div>
-                            <time class="exp-date">Mar 2025 &mdash; Present</time>
-                        </div>
-                        <ul class="exp-details">
-                            <li>Lead a team of 5 engineers supporting production SaaS on GCP, managing 60-100 tickets/incidents per month with 1-5 min response time</li>
-                            <li>Designed and built a full-stack Telegram chatbot &mdash; backend integrations with GCP databases, log sources, command handling, and Jira API for ticket automation</li>
-                            <li>Built internal tooling to automate version control and release workflows using Jenkins and ArgoCD</li>
-                            <li>Monitor Kubernetes clusters with k9s and build Grafana dashboards for real-time service health</li>
-                            <li>Partner with dev teams on root-cause investigations, deployment validation, and release readiness</li>
-                            <li>Promoted to Team Lead after 9 months for incident resolution performance and cross-functional coordination</li>
-                        </ul>
-                    </article>
-                    <!-- Nephila -->
-                    <article class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-title-group">
-                                <h3>Junior Web Developer</h3>
-                                <span class="exp-company">Nephila Web Technologies Inc.</span>
+                            <ul class="exp-details">
+                                <li>Lead a team of 5 engineers supporting production SaaS on GCP, managing 60-100 tickets/incidents per month with 1-5 min response time</li>
+                                <li>Designed and built a full-stack Telegram chatbot &mdash; backend integrations with GCP databases, log sources, command handling, and Jira API for ticket automation</li>
+                                <li>Built internal tooling to automate version control and release workflows using Jenkins and ArgoCD</li>
+                                <li>Monitor Kubernetes clusters with k9s and build Grafana dashboards for real-time service health</li>
+                                <li>Partner with dev teams on root-cause investigations, deployment validation, and release readiness</li>
+                                <li>Promoted to Team Lead after 9 months for incident resolution performance and cross-functional coordination</li>
+                            </ul>
+                        </article>
+                        <!-- Nephila -->
+                        <article class="exp-card">
+                            <div class="exp-header">
+                                <div class="exp-title-group">
+                                    <h3>Junior Web Developer</h3>
+                                    <span class="exp-company">Nephila Web Technologies Inc.</span>
+                                </div>
+                                <time class="exp-date">Feb 2024 &mdash; Mar 2025</time>
                             </div>
-                            <time class="exp-date">Feb 2024 &mdash; Mar 2025</time>
-                        </div>
-                        <ul class="exp-details">
-                            <li>Developed and enhanced internal web systems including School Information Systems (SIS) and HRIS platforms</li>
-                            <li>Built features across the stack, collaborating with developers and stakeholders to gather requirements and ship deployments</li>
-                            <li>Investigated and resolved root causes of application issues to minimize downtime</li>
-                            <li>Mentored and supervised interns with technical guidance and task delegation</li>
-                        </ul>
-                    </article>
-                    <!-- Freelance -->
-                    <article class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-title-group">
-                                <h3>Technical Mentor & Capstone Consultant</h3>
-                                <span class="exp-company">Freelance</span>
+                            <ul class="exp-details">
+                                <li>Developed and enhanced internal web systems including School Information Systems (SIS) and HRIS platforms</li>
+                                <li>Built features across the stack, collaborating with developers and stakeholders to gather requirements and ship deployments</li>
+                                <li>Investigated and resolved root causes of application issues to minimize downtime</li>
+                                <li>Mentored and supervised interns with technical guidance and task delegation</li>
+                            </ul>
+                        </article>
+                        <!-- Freelance -->
+                        <article class="exp-card">
+                            <div class="exp-header">
+                                <div class="exp-title-group">
+                                    <h3>Technical Mentor & Capstone Consultant</h3>
+                                    <span class="exp-company">Freelance</span>
+                                </div>
+                                <time class="exp-date">2018 &mdash; Present</time>
                             </div>
-                            <time class="exp-date">2018 &mdash; Present</time>
-                        </div>
-                        <ul class="exp-details">
-                            <li>Provide architectural guidance and code reviews for student capstone projects across PHP, Node.js, and Python</li>
-                            <li>Troubleshoot complex bugs and logic issues, helping translate theoretical knowledge into production-ready applications</li>
-                            <li>Mentor students on database design, API integration, and deployment best practices</li>
-                        </ul>
-                    </article>
+                            <ul class="exp-details">
+                                <li>Provide architectural guidance and code reviews for student capstone projects across PHP, Node.js, and Python</li>
+                                <li>Troubleshoot complex bugs and logic issues, helping translate theoretical knowledge into production-ready applications</li>
+                                <li>Mentor students on database design, API integration, and deployment best practices</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="exp-carousel-nav">
+                        <button class="exp-nav-btn exp-prev" aria-label="Previous role"><i class="fas fa-chevron-left"></i></button>
+                        <div class="exp-indicators"></div>
+                        <button class="exp-nav-btn exp-next" aria-label="Next role"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -305,12 +312,9 @@
                     <span class="label-text">Stack</span>
                 </div>
                 <div class="stack-grid">
-                    <div class="stack-group" data-accordion>
-                        <button class="stack-header" aria-expanded="false">
-                            <h3><span class="stack-icon">&#9670;</span> Frontend</h3>
-                            <i class="fas fa-chevron-down stack-chevron"></i>
-                        </button>
-                        <div class="stack-tags" hidden>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Frontend</h3>
+                        <div class="stack-tags">
                             <span><i class="fab fa-react"></i> React</span>
                             <span><i class="fas fa-n"></i> Next.js</span>
                             <span><i class="fab fa-vuejs"></i> Vue</span>
@@ -319,12 +323,9 @@
                             <span><i class="fas fa-shield-halved"></i> Zod</span>
                         </div>
                     </div>
-                    <div class="stack-group" data-accordion>
-                        <button class="stack-header" aria-expanded="false">
-                            <h3><span class="stack-icon">&#9670;</span> Backend</h3>
-                            <i class="fas fa-chevron-down stack-chevron"></i>
-                        </button>
-                        <div class="stack-tags" hidden>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Backend</h3>
+                        <div class="stack-tags">
                             <span><i class="fab fa-node-js"></i> Node.js</span>
                             <span><i class="fas fa-fire"></i> Hono</span>
                             <span><i class="fas fa-arrows-left-right"></i> tRPC</span>
@@ -334,12 +335,9 @@
                             <span><i class="fab fa-python"></i> Python</span>
                         </div>
                     </div>
-                    <div class="stack-group" data-accordion>
-                        <button class="stack-header" aria-expanded="false">
-                            <h3><span class="stack-icon">&#9670;</span> Cloud & DevOps</h3>
-                            <i class="fas fa-chevron-down stack-chevron"></i>
-                        </button>
-                        <div class="stack-tags" hidden>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Cloud & DevOps</h3>
+                        <div class="stack-tags">
                             <span><i class="fab fa-google"></i> GCP</span>
                             <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
                             <span><i class="fab fa-docker"></i> Docker</span>
@@ -351,12 +349,9 @@
                             <span><i class="fas fa-train-subway"></i> Railway</span>
                         </div>
                     </div>
-                    <div class="stack-group" data-accordion>
-                        <button class="stack-header" aria-expanded="false">
-                            <h3><span class="stack-icon">&#9670;</span> Databases</h3>
-                            <i class="fas fa-chevron-down stack-chevron"></i>
-                        </button>
-                        <div class="stack-tags" hidden>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Databases</h3>
+                        <div class="stack-tags">
                             <span><i class="fas fa-database"></i> PostgreSQL</span>
                             <span><i class="fas fa-database"></i> MySQL</span>
                             <span><i class="fas fa-leaf"></i> MongoDB</span>
@@ -366,12 +361,9 @@
                             <span><i class="fas fa-droplet"></i> Drizzle ORM</span>
                         </div>
                     </div>
-                    <div class="stack-group" data-accordion>
-                        <button class="stack-header" aria-expanded="false">
-                            <h3><span class="stack-icon">&#9670;</span> Monitoring</h3>
-                            <i class="fas fa-chevron-down stack-chevron"></i>
-                        </button>
-                        <div class="stack-tags" hidden>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Monitoring</h3>
+                        <div class="stack-tags">
                             <span><i class="fas fa-chart-line"></i> Grafana</span>
                             <span><i class="fas fa-eye"></i> Stackdriver</span>
                             <span><i class="fas fa-bug"></i> Error Reporting</span>
@@ -379,12 +371,9 @@
                             <span><i class="fas fa-terminal"></i> k9s</span>
                         </div>
                     </div>
-                    <div class="stack-group" data-accordion>
-                        <button class="stack-header" aria-expanded="false">
-                            <h3><span class="stack-icon">&#9670;</span> Tools</h3>
-                            <i class="fas fa-chevron-down stack-chevron"></i>
-                        </button>
-                        <div class="stack-tags" hidden>
+                    <div class="stack-group">
+                        <h3><span class="stack-icon">&#9670;</span> Tools</h3>
+                        <div class="stack-tags">
                             <span><i class="fab fa-jira"></i> Jira</span>
                             <span><i class="fab fa-confluence"></i> Confluence</span>
                             <span><i class="fab fa-bitbucket"></i> Bitbucket</span>
@@ -405,17 +394,17 @@
                     <span class="label-index">05</span>
                     <span class="label-text">Certifications</span>
                 </div>
-                <div class="certs-list">
-                    <a href="certificates/CompTIA IT Fundamentals (ITF+) Certification certificate.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CompTIA ITF+<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/LFC108-Paolo_Robles.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> LFC108 &mdash; Cybersecurity Essentials (Linux Foundation)<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/certificate-bitdpfpwy7t8-1774389854 (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Claude Code 101 &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/certificate-dqcku9f27iiz-1774387702 (3) (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Claude Code in Action &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/OpenAI API - Paolo Robles (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> OpenAI API &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/Javascript Certificate - Paolo Robles (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> JavaScript Fundamentals &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/Error Handling Course - Paolo Robles (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> JavaScript Error Handling &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/Asynchronous Programming Course - Paolo Robles (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Asynchronous Programming &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/NodeJS with ExpressJS - Paolo Robles (1).pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Node.js with Express.js &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
-                    <a href="certificates/APPCON - CODEVID - Participant Certificates.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> APPCON CODEVID &mdash; Participant Certificate<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
+                <div class="certs-grid">
+                    <a href="certificates/CompTIA IT Fundamentals (ITF+) Certification certificate.pdf" target="_blank" class="cert-card"><i class="fas fa-shield-halved"></i><span>CompTIA ITF+</span></a>
+                    <a href="certificates/LFC108-Paolo_Robles.pdf" target="_blank" class="cert-card"><i class="fas fa-lock"></i><span>LFC108 Cybersecurity Essentials</span></a>
+                    <a href="certificates/certificate-bitdpfpwy7t8-1774389854 (1).pdf" target="_blank" class="cert-card"><i class="fas fa-robot"></i><span>Claude Code 101</span></a>
+                    <a href="certificates/certificate-dqcku9f27iiz-1774387702 (3) (1).pdf" target="_blank" class="cert-card"><i class="fas fa-robot"></i><span>Claude Code in Action</span></a>
+                    <a href="certificates/OpenAI API - Paolo Robles (1).pdf" target="_blank" class="cert-card"><i class="fas fa-brain"></i><span>OpenAI API</span></a>
+                    <a href="certificates/Javascript Certificate - Paolo Robles (1).pdf" target="_blank" class="cert-card"><i class="fab fa-js"></i><span>JavaScript Fundamentals</span></a>
+                    <a href="certificates/Error Handling Course - Paolo Robles (1).pdf" target="_blank" class="cert-card"><i class="fas fa-bug"></i><span>JS Error Handling</span></a>
+                    <a href="certificates/Asynchronous Programming Course - Paolo Robles (1).pdf" target="_blank" class="cert-card"><i class="fas fa-clock-rotate-left"></i><span>Async Programming</span></a>
+                    <a href="certificates/NodeJS with ExpressJS - Paolo Robles (1).pdf" target="_blank" class="cert-card"><i class="fab fa-node-js"></i><span>Node.js & Express.js</span></a>
+                    <a href="certificates/APPCON - CODEVID - Participant Certificates.pdf" target="_blank" class="cert-card"><i class="fas fa-trophy"></i><span>APPCON CODEVID</span></a>
                 </div>
             </div>
         </section>

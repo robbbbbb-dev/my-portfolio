@@ -665,42 +665,100 @@ p {
     letter-spacing: 0.08em;
 }
 
-/* ---- Experience ---- */
-.exp-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+/* ---- Experience Carousel ---- */
+.exp-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    perspective: 1200px;
 }
 
-.exp-item {
+.exp-carousel-track {
+    position: relative;
+    min-height: 380px;
+}
+
+.exp-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 2.5rem;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.exp-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--accent);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transform: rotateY(90deg) scale(0.85);
+    pointer-events: none;
 }
 
-.exp-item:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
-}
-
-.exp-item:hover::after {
+.exp-card.active {
     opacity: 1;
+    transform: rotateY(0deg) scale(1);
+    pointer-events: auto;
+    position: relative;
+}
+
+.exp-card.prev {
+    opacity: 0.3;
+    transform: rotateY(-30deg) translateX(-60px) scale(0.88);
+}
+
+.exp-card.next {
+    opacity: 0.3;
+    transform: rotateY(30deg) translateX(60px) scale(0.88);
+}
+
+.exp-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.exp-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.85rem;
+}
+
+.exp-nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.exp-indicators {
+    display: flex;
+    gap: 8px;
+}
+
+.exp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0;
+}
+
+.exp-dot.active {
+    background: var(--accent);
+    width: 24px;
+    border-radius: 100px;
 }
 
 .exp-header {
@@ -914,7 +972,7 @@ p {
 .stack-group h3 {
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 0;
+    margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -997,37 +1055,45 @@ p {
     background: var(--accent-dim);
 }
 
-/* ---- Certifications ---- */
-.certs-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+/* ---- Certifications Grid ---- */
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
-.cert-item {
+.cert-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    font-size: 0.92rem;
+    text-align: center;
+    text-decoration: none;
     color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 500;
     transition: var(--transition);
 }
 
-.cert-item:hover {
-    border-color: rgba(0, 229, 160, 0.3);
-    transform: translateX(4px);
-    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.3), 0 0 8px -4px var(--accent-dim);
+.cert-card i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: transform 0.3s ease;
 }
 
-.cert-icon {
-    color: var(--accent);
-    font-size: 0.9rem;
-    width: 20px;
-    text-align: center;
+.cert-card:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    color: var(--text);
+    transform: translateY(-4px);
+}
+
+.cert-card:hover i {
+    transform: scale(1.15);
 }
 
 /* ---- Contact ---- */
@@ -1127,7 +1193,7 @@ footer p {
 }
 
 /* Staggered children */
-.section.visible .exp-item,
+.section.visible .exp-card,
 .section.visible .project-card,
 .section.visible .stack-group,
 .section.visible .stat-card,
@@ -1251,64 +1317,9 @@ footer p {
     border-radius: 100px;
 }
 
-/* ---- Stack Accordion ---- */
-.stack-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: inherit;
-    font: inherit;
-}
+/* (stack accordion removed - tags always visible) */
 
-.stack-header h3 {
-    margin-bottom: 0;
-}
-
-.stack-chevron {
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.stack-header[aria-expanded="true"] .stack-chevron {
-    transform: rotate(180deg);
-    color: var(--accent);
-}
-
-.stack-group .stack-tags {
-    margin-top: 1.25rem;
-    overflow: hidden;
-    transition: margin 0.3s ease;
-}
-
-.stack-group .stack-tags[hidden] {
-    display: none;
-}
-
-/* ---- Cert Links ---- */
-a.cert-item {
-    text-decoration: none;
-    color: var(--text-secondary);
-    position: relative;
-}
-
-.cert-link-icon {
-    margin-left: auto;
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    opacity: 0;
-    transition: opacity 0.3s ease, color 0.3s ease;
-}
-
-a.cert-item:hover .cert-link-icon {
-    opacity: 1;
-    color: var(--accent);
-}
+/* (cert link icon removed - using card layout now) */
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
@@ -1441,7 +1452,7 @@ a.cert-item:hover .cert-link-icon {
         grid-template-columns: 1fr 1fr;
     }
 
-    .exp-item {
+    .exp-card {
         padding: 1.5rem;
     }
 
@@ -1556,7 +1567,7 @@ a.cert-item:hover .cert-link-icon {
     color: #ffffff;
 }
 
-[data-theme="light"] .exp-item,
+[data-theme="light"] .exp-card,
 [data-theme="light"] .project-card,
 [data-theme="light"] .stack-group,
 [data-theme="light"] .cert-item,
