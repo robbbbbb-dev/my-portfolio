@@ -665,100 +665,77 @@ p {
     letter-spacing: 0.08em;
 }
 
-/* ---- Experience Carousel ---- */
-.exp-carousel {
-    position: relative;
+/* ---- Experience ---- */
+.exp-scroll-container {
     max-width: 800px;
     margin: 0 auto;
-    perspective: 1200px;
 }
 
-.exp-carousel-track {
-    position: relative;
-    min-height: 380px;
+.exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.exp-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.exp-item {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 2.5rem;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    transform: rotateY(90deg) scale(0.85);
-    pointer-events: none;
-}
-
-.exp-card.active {
-    opacity: 1;
-    transform: rotateY(0deg) scale(1);
-    pointer-events: auto;
+    transition: var(--transition);
     position: relative;
+    overflow: hidden;
 }
 
-.exp-card.prev {
-    opacity: 0.3;
-    transform: rotateY(-30deg) translateX(-60px) scale(0.88);
+.exp-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.exp-card.next {
-    opacity: 0.3;
-    transform: rotateY(30deg) translateX(60px) scale(0.88);
+.exp-item:hover {
+    border-color: var(--border-hover);
 }
 
-.exp-carousel-nav {
+.exp-item:hover::after {
+    opacity: 1;
+}
+
+.exp-scroll-top {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1.5rem;
     margin-top: 2rem;
 }
 
-.exp-nav-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: var(--bg-card);
-    color: var(--text-secondary);
-    display: flex;
+.exp-back-btn {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
     cursor: pointer;
     transition: var(--transition);
-    font-size: 0.85rem;
 }
 
-.exp-nav-btn:hover {
+.exp-back-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
     background: var(--accent-dim);
 }
 
-.exp-indicators {
-    display: flex;
-    gap: 8px;
-}
-
-.exp-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--border);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 0;
-}
-
-.exp-dot.active {
-    background: var(--accent);
-    width: 24px;
-    border-radius: 100px;
+.exp-back-btn:active {
+    transform: scale(0.97);
 }
 
 .exp-header {
@@ -1193,7 +1170,7 @@ footer p {
 }
 
 /* Staggered children */
-.section.visible .exp-card,
+.section.visible .exp-item,
 .section.visible .project-card,
 .section.visible .stack-group,
 .section.visible .stat-card,
@@ -1452,7 +1429,7 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
-    .exp-card {
+    .exp-item {
         padding: 1.5rem;
     }
 
@@ -1567,7 +1544,7 @@ footer p {
     color: #ffffff;
 }
 
-[data-theme="light"] .exp-card,
+[data-theme="light"] .exp-item,
 [data-theme="light"] .project-card,
 [data-theme="light"] .stack-group,
 [data-theme="light"] .cert-item,
