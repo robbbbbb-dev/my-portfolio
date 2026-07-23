@@ -876,6 +876,13 @@ p {
     border-radius: var(--radius-sm);
     color: #a0a0b4;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-stack span i {
+    font-size: 0.75rem;
 }
 
 [data-theme="dark"] .project-card:hover .project-stack span,
