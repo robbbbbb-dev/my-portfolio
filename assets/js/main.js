@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // ---- Experience Carousel ----
+    // ---- Experience Carousel (Vertical) ----
     const expTrack = document.querySelector('.exp-track');
     const expItems = document.querySelectorAll('.exp-item');
     const expPrevBtn = document.querySelector('.exp-prev-btn');
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index < 0) index = expItems.length - 1;
         if (index >= expItems.length) index = 0;
         expCurrentIndex = index;
-        expItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        expItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         updateExpDots();
     }
 
@@ -273,9 +273,9 @@ document.addEventListener('DOMContentLoaded', () => {
         expTrack.addEventListener('scroll', () => {
             clearTimeout(expScrollTimeout);
             expScrollTimeout = setTimeout(() => {
-                const scrollLeft = expTrack.scrollLeft;
-                const cardWidth = expItems[0].offsetWidth + 24;
-                const newIndex = Math.round(scrollLeft / cardWidth);
+                const scrollTop = expTrack.scrollTop;
+                const cardHeight = expItems[0].offsetHeight + 24;
+                const newIndex = Math.round(scrollTop / cardHeight);
                 if (newIndex !== expCurrentIndex && newIndex >= 0 && newIndex < expItems.length) {
                     expCurrentIndex = newIndex;
                     updateExpDots();

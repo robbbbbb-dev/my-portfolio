@@ -672,12 +672,14 @@ p {
 
 .exp-track {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
     gap: 1.5rem;
-    padding-bottom: 1rem;
+    max-height: 420px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding-right: 0.5rem;
 }
 
 .exp-track::-webkit-scrollbar {
@@ -685,7 +687,7 @@ p {
 }
 
 .exp-item {
-    flex: 0 0 100%;
+    flex: 0 0 auto;
     scroll-snap-align: start;
     background: var(--bg-card);
     border: 1px solid var(--border);
