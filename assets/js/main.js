@@ -196,8 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function scrollToCard(index) {
-        if (index < 0) index = 0;
-        if (index >= cards.length) index = cards.length - 1;
+        if (index < 0) index = cards.length - 1;
+        if (index >= cards.length) index = 0;
         currentIndex = index;
         cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
         updateDots();
