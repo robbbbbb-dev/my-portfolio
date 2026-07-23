@@ -666,76 +666,88 @@ p {
 }
 
 /* ---- Experience ---- */
-.exp-carousel {
+.exp-viewer {
     position: relative;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-card);
 }
 
-.exp-track {
-    display: flex;
-    flex-direction: column;
+.exp-progress-bar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 4px;
+    background: var(--border);
+}
+
+.exp-progress-fill {
+    height: 100%;
+    width: 33.33%;
+    background: var(--accent);
+    border-radius: 0 100px 100px 0;
+    transition: width 0.3s ease;
+}
+
+.exp-scroll-area {
+    max-height: 400px;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    gap: 1.5rem;
-    max-height: 420px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-right: 0.5rem;
 }
 
-.exp-track::-webkit-scrollbar {
+.exp-scroll-area::-webkit-scrollbar {
     display: none;
 }
 
 .exp-item {
-    flex: 0 0 auto;
     scroll-snap-align: start;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
     padding: 2.5rem;
-    transition: var(--transition);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
-    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child {
+    border-bottom: none;
 }
 
 .exp-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--accent);
+    display: none;
 }
 
-.exp-nav {
+.exp-back-top {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.exp-dots {
-    display: flex;
-    gap: 8px;
-}
-
-.exp-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--border);
-    border: none;
     cursor: pointer;
     transition: var(--transition);
-    padding: 0;
+    font-size: 0.9rem;
+    z-index: 3;
 }
 
-.exp-dot.active {
-    background: var(--accent);
-    width: 24px;
-    border-radius: 100px;
+.exp-back-top:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.exp-back-top[hidden] {
+    display: none;
 }
 
 .exp-header {

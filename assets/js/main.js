@@ -230,57 +230,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // ---- Experience Carousel (Vertical) ----
-    const expTrack = document.querySelector('.exp-track');
-    const expItems = document.querySelectorAll('.exp-item');
-    const expPrevBtn = document.querySelector('.exp-prev-btn');
-    const expNextBtn = document.querySelector('.exp-next-btn');
-    const expDotsContainer = document.querySelector('.exp-dots');
-    let expCurrentIndex = 0;
+    // ---- Experience Viewer ----
+    const expScrollArea = document.querySelector('.exp-scroll-area');
+    const expItemsList = document.querySelectorAll('.exp-scroll-area .exp-item');
+    const expProgressFill = document.querySelector('.exp-progress-fill');
+    const expBackTop = document.querySelector('.exp-back-top');
 
-    // Create dots
-    if (expDotsContainer) {
-        expItems.forEach((_, i) => {
-            const dot = document.createElement('button');
-            dot.classList.add('exp-dot');
-            dot.setAttribute('aria-label', `Go to role ${i + 1}`);
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => scrollToExp(i));
-            expDotsContainer.appendChild(dot);
-        });
-    }
+    if (expScrollArea && expItemsList.length > 0) {
+        expScrollArea.addEventListener('scroll', () => {
+            const scrollTop = expScrollArea.scrollTop;
+            const scrollHeight = expScrollArea.scrollHeight - expScrollArea.clientHeight;
+            const progress = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
 
-    function scrollToExp(index) {
-        if (index < 0) index = expItems.length - 1;
-        if (index >= expItems.length) index = 0;
-        expCurrentIndex = index;
-        expItems[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        updateExpDots();
-    }
+            // Update progress bar
+            const percentage = ((progress * (expItemsList.length - 1)) + 1) / expItemsList.length * 100;
+            if (expProgressFill) {
+                expProgressFill.style.width = Math.min(percentage, 100) + '%';
+            }
 
-    function updateExpDots() {
-        if (!expDotsContainer) return;
-        const dots = expDotsContainer.querySelectorAll('.exp-dot');
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === expCurrentIndex));
-    }
-
-    if (expPrevBtn) expPrevBtn.addEventListener('click', () => scrollToExp(expCurrentIndex - 1));
-    if (expNextBtn) expNextBtn.addEventListener('click', () => scrollToExp(expCurrentIndex + 1));
-
-    // Update dots on manual scroll
-    if (expTrack) {
-        let expScrollTimeout;
-        expTrack.addEventListener('scroll', () => {
-            clearTimeout(expScrollTimeout);
-            expScrollTimeout = setTimeout(() => {
-                const scrollTop = expTrack.scrollTop;
-                const cardHeight = expItems[0].offsetHeight + 24;
-                const newIndex = Math.round(scrollTop / cardHeight);
-                if (newIndex !== expCurrentIndex && newIndex >= 0 && newIndex < expItems.length) {
-                    expCurrentIndex = newIndex;
-                    updateExpDots();
+            // Show/hide back-to-top button when at last card
+            const isAtEnd = scrollTop >= scrollHeight - 10;
+            if (expBackTop) {
+                if (isAtEnd) {
+                    expBackTop.removeAttribute('hidden');
+                } else {
+                    expBackTop.setAttribute('hidden', '');
                 }
-            }, 50);
+            }
         }, { passive: true });
+
+        // Back to top button
+        if (expBackTop) {
+            expBackTop.addEventListener('click', () => {
+                expScrollArea.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     }
 });
