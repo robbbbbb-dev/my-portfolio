@@ -176,4 +176,74 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.borderBottomColor = 'rgba(255,255,255,0.06)';
         }
     }, { passive: true });
+
+    // ---- Projects Carousel ----
+    const track = document.querySelector('.projects-track');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    const cards = document.querySelectorAll('.project-card');
+    let currentIndex = 0;
+
+    // Create dots
+    cards.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        dot.setAttribute('aria-label', `Go to project ${i + 1}`);
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => scrollToCard(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    function scrollToCard(index) {
+        if (index < 0) index = 0;
+        if (index >= cards.length) index = cards.length - 1;
+        currentIndex = index;
+        cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        updateDots();
+    }
+
+    function updateDots() {
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => scrollToCard(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => scrollToCard(currentIndex + 1));
+
+    // Update dots on manual scroll
+    if (track) {
+        let scrollTimeout;
+        track.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollLeft = track.scrollLeft;
+                const cardWidth = cards[0].offsetWidth + 24; // gap
+                const newIndex = Math.round(scrollLeft / cardWidth);
+                if (newIndex !== currentIndex) {
+                    currentIndex = newIndex;
+                    updateDots();
+                }
+            }, 50);
+        }, { passive: true });
+    }
+
+    // ---- Stack Accordion ----
+    const stackHeaders = document.querySelectorAll('.stack-header');
+    stackHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const expanded = header.getAttribute('aria-expanded') === 'true';
+            const tags = header.nextElementSibling;
+
+            if (expanded) {
+                header.setAttribute('aria-expanded', 'false');
+                tags.setAttribute('hidden', '');
+            } else {
+                header.setAttribute('aria-expanded', 'true');
+                tags.removeAttribute('hidden');
+            }
+        });
+    });
 });

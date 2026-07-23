@@ -204,7 +204,8 @@
                     <span class="label-index">03</span>
                     <span class="label-text">Projects</span>
                 </div>
-                <div class="projects-grid">
+                <div class="projects-carousel">
+                    <div class="projects-track">
                     <article class="project-card featured">
                         <div class="project-card-inner">
                             <div class="project-top">
@@ -283,6 +284,12 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn carousel-prev" aria-label="Previous project"><i class="fas fa-arrow-left"></i></button>
+                        <div class="carousel-dots"></div>
+                        <button class="carousel-btn carousel-next" aria-label="Next project"><i class="fas fa-arrow-right"></i></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -295,9 +302,12 @@
                     <span class="label-text">Stack</span>
                 </div>
                 <div class="stack-grid">
-                    <div class="stack-group">
-                        <h3><span class="stack-icon">&#9670;</span> Frontend</h3>
-                        <div class="stack-tags">
+                    <div class="stack-group" data-accordion>
+                        <button class="stack-header" aria-expanded="false">
+                            <h3><span class="stack-icon">&#9670;</span> Frontend</h3>
+                            <i class="fas fa-chevron-down stack-chevron"></i>
+                        </button>
+                        <div class="stack-tags" hidden>
                             <span><i class="fab fa-react"></i> React</span>
                             <span><i class="fas fa-n"></i> Next.js</span>
                             <span><i class="fab fa-vuejs"></i> Vue</span>
@@ -306,9 +316,12 @@
                             <span><i class="fas fa-shield-halved"></i> Zod</span>
                         </div>
                     </div>
-                    <div class="stack-group">
-                        <h3><span class="stack-icon">&#9670;</span> Backend</h3>
-                        <div class="stack-tags">
+                    <div class="stack-group" data-accordion>
+                        <button class="stack-header" aria-expanded="false">
+                            <h3><span class="stack-icon">&#9670;</span> Backend</h3>
+                            <i class="fas fa-chevron-down stack-chevron"></i>
+                        </button>
+                        <div class="stack-tags" hidden>
                             <span><i class="fab fa-node-js"></i> Node.js</span>
                             <span><i class="fas fa-fire"></i> Hono</span>
                             <span><i class="fas fa-arrows-left-right"></i> tRPC</span>
@@ -318,9 +331,12 @@
                             <span><i class="fab fa-python"></i> Python</span>
                         </div>
                     </div>
-                    <div class="stack-group">
-                        <h3><span class="stack-icon">&#9670;</span> Cloud & DevOps</h3>
-                        <div class="stack-tags">
+                    <div class="stack-group" data-accordion>
+                        <button class="stack-header" aria-expanded="false">
+                            <h3><span class="stack-icon">&#9670;</span> Cloud & DevOps</h3>
+                            <i class="fas fa-chevron-down stack-chevron"></i>
+                        </button>
+                        <div class="stack-tags" hidden>
                             <span><i class="fab fa-google"></i> GCP</span>
                             <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
                             <span><i class="fab fa-docker"></i> Docker</span>
@@ -332,9 +348,12 @@
                             <span><i class="fas fa-train-subway"></i> Railway</span>
                         </div>
                     </div>
-                    <div class="stack-group">
-                        <h3><span class="stack-icon">&#9670;</span> Databases</h3>
-                        <div class="stack-tags">
+                    <div class="stack-group" data-accordion>
+                        <button class="stack-header" aria-expanded="false">
+                            <h3><span class="stack-icon">&#9670;</span> Databases</h3>
+                            <i class="fas fa-chevron-down stack-chevron"></i>
+                        </button>
+                        <div class="stack-tags" hidden>
                             <span><i class="fas fa-database"></i> PostgreSQL</span>
                             <span><i class="fas fa-database"></i> MySQL</span>
                             <span><i class="fas fa-leaf"></i> MongoDB</span>
@@ -344,9 +363,12 @@
                             <span><i class="fas fa-droplet"></i> Drizzle ORM</span>
                         </div>
                     </div>
-                    <div class="stack-group">
-                        <h3><span class="stack-icon">&#9670;</span> Monitoring</h3>
-                        <div class="stack-tags">
+                    <div class="stack-group" data-accordion>
+                        <button class="stack-header" aria-expanded="false">
+                            <h3><span class="stack-icon">&#9670;</span> Monitoring</h3>
+                            <i class="fas fa-chevron-down stack-chevron"></i>
+                        </button>
+                        <div class="stack-tags" hidden>
                             <span><i class="fas fa-chart-line"></i> Grafana</span>
                             <span><i class="fas fa-eye"></i> Stackdriver</span>
                             <span><i class="fas fa-bug"></i> Error Reporting</span>
@@ -354,9 +376,12 @@
                             <span><i class="fas fa-terminal"></i> k9s</span>
                         </div>
                     </div>
-                    <div class="stack-group">
-                        <h3><span class="stack-icon">&#9670;</span> Tools</h3>
-                        <div class="stack-tags">
+                    <div class="stack-group" data-accordion>
+                        <button class="stack-header" aria-expanded="false">
+                            <h3><span class="stack-icon">&#9670;</span> Tools</h3>
+                            <i class="fas fa-chevron-down stack-chevron"></i>
+                        </button>
+                        <div class="stack-tags" hidden>
                             <span><i class="fab fa-jira"></i> Jira</span>
                             <span><i class="fab fa-confluence"></i> Confluence</span>
                             <span><i class="fab fa-bitbucket"></i> Bitbucket</span>
@@ -378,11 +403,11 @@
                     <span class="label-text">Certifications</span>
                 </div>
                 <div class="certs-list">
-                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CompTIA ITF+</div>
-                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> LFC108 &mdash; Kubernetes & Cloud Native Associate Prep (Linux Foundation)</div>
-                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CCNA: Introduction to Networks</div>
-                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Claude Code 101 &mdash; Certificate of Completion</div>
-                    <div class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> OpenAI API &mdash; Certificate of Completion</div>
+                    <a href="certificates/comptia-itf.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CompTIA ITF+<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
+                    <a href="certificates/lfc108-kubernetes.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> LFC108 &mdash; Kubernetes & Cloud Native Associate Prep (Linux Foundation)<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
+                    <a href="certificates/ccna-intro-networks.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> CCNA: Introduction to Networks<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
+                    <a href="certificates/claude-code-101.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> Claude Code 101 &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
+                    <a href="certificates/openai-api.pdf" target="_blank" class="cert-item"><span class="cert-icon"><i class="fas fa-award"></i></span> OpenAI API &mdash; Certificate of Completion<span class="cert-link-icon"><i class="fas fa-external-link-alt"></i></span></a>
                 </div>
             </div>
         </section>
