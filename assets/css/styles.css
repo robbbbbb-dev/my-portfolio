@@ -813,6 +813,12 @@ p {
     color: var(--accent);
 }
 
+.exp-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    font-style: italic;
+}
+
 .exp-date {
     font-family: var(--font-mono);
     font-size: 0.78rem;
